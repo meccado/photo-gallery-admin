@@ -1,0 +1,27 @@
+{
+    "name": "meccado/photo-gallery-admin",
+    "description": "Photo Gallery",
+    "keywords": [
+      "laravel",
+      "Photo Gallery Admin"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Meccado",
+            "email": "tsw603gp@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Meccado\\PhotoGalleryAdmin\\": "src"
+        }
+    },
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : "~5.5|~7.0",
+        "laravelcollective/html": "^5.2",
+        "intervention/image": "^2.3",
+        "meccado/acl-admin-control-panel": "^1.0"
+    }
+}
