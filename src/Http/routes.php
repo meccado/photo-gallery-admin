@@ -1,8 +1,9 @@
 <?php
 //'prefix'=>'api/v1',
 Route::group([ 'prefix'			=>'admin',
-				'middleware' 	=> ['web', 'throttle'],
-				'namespace' 	=> 'App\Http\Controllers\Admin'], function(){
+				'middleware' 	=> ['web', 'throttle', 'auth', 'admin'],
+				'namespace' 	=> 'App\Http\Controllers\Admin'], 
+             function(){
     Route::resource('galleries', 'PhotoGalleryController', ['only' => ['index', 'show','create', 'store', 'edit', 'update', 'destroy']]);
 
     Route::post('galleries/{galleries}/upload', ['as' => 'admin.galleries.upload', 'uses' => 'PhotoGalleryController@upload']);
