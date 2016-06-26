@@ -146,12 +146,11 @@ class PhotoGalleryController extends Controller
             abort('403', 'You are not allowed to delete the photoAlbum.');
         }
         foreach($photoGallery->photos as $photo){
-           unlink(public_path($photo->file_path));
+           unlink($photo->file_path);
         }
 
         $photoGallery->photos()->delete();
         $photoGallery->delete();
         return \Redirect::back();
     }
-
 }
